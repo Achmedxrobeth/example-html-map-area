@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>indonesia</title>
+	<style type="text/css">
+		area{
+			opacity: 0.5;
+		}
+	</style>
+	<script language="JavaScript">
+function get_coords(event){
+    pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("image").offsetLeft;
+    pos_y = event.offsetY?(event.offsetY):event.pageY-document.getElementById("image").offsetTop;
+	document.getElementById("coords_x").innerHTML=pos_x;
+	document.getElementById("coords_y").innerHTML=pos_y;
+}
+</script>
+</head>
+<body>
+<!--
+x,y<br>
+<span id="coords_x"></span>,<span id="coords_y"></span>
+<br>
+-->
+<img id="image" onclick="get_coords(event)" src="mapindonesia.gif" usemap="indonesia">
+<map name="indonesia">
+	<!--area shape="default" title="INDONESIA" href="#"-->
+	<area shape="poly" coords="39,98,51,90,168,190,153,238,97,186" title="Sumatra" href="#">
+	<area shape="poly" coords="165,225,221,230,260,247,260,263,151,239" title="Java" href="#">
+	<area shape="circle" coords="268,255,24" title="Bali" href="#">
+	<area shape="poly" coords="197,132,238,142,273,107,306,116,275,213,207,195" title="Burneo" href="#">
+	<area shape="poly" coords="321,144,382,138,353,189,365,223,308,226" title="Sulawesi" href="#">
+	<area shape="poly" coords="446,162,485,168,496,195,525,172,563,186,565,269,524,258,522,225,467,210" title="Papua" href="#">
+</map>
+</body>
+</html>
